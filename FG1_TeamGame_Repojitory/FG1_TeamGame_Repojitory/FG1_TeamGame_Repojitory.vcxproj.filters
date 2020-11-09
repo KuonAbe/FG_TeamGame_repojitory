@@ -66,6 +66,9 @@
     <ClCompile Include="Scene_Manager.cpp">
       <Filter>ソース ファイル\Scene.cpp</Filter>
     </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>ソース ファイル\Utility.cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene_Manager.h">
@@ -73,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="Base_Scene.h">
       <Filter>ヘッダー ファイル\Scene.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>ヘッダー ファイル\Utility.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
