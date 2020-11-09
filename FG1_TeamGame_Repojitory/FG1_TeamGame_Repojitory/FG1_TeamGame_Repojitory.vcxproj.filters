@@ -76,7 +76,10 @@
       <Filter>ソース ファイル\Scene.cpp\Stage1.cpp</Filter>
     </ClCompile>
     <ClCompile Include="Stage1_ground.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Scene.cpp\Stage1.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>ソース ファイル\Actor.cpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -96,7 +99,10 @@
       <Filter>ヘッダー ファイル\Scene.h\Stage1.h</Filter>
     </ClInclude>
     <ClInclude Include="Stage1_ground.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\Scene.h\Stage1.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>ヘッダー ファイル\Actor.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
