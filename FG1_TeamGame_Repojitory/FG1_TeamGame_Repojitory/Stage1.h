@@ -2,10 +2,10 @@
 #include<DxLib.h>
 #include"Base_Scene.h"
 #include"Scene_Manager.h"
-//#include"Stage1_ground.h"
-//#include"Player.h"
-//#include"Enemy.h"
-//#include"Stage1_DayTime.h"
+#include"Stage1_ground.h"
+#include"Player.h"
+#include"Enemy.h"
+#include"Stage1_DayTime.h"
 
 class Stage1 :public Base_Scene
 {
@@ -33,13 +33,13 @@ public:
 	void Draw()override;
 	void Finish()override;
 
-	////マップチップ
-	//Stage1_ground stage1_Ground;
-	//Stage1_DayTime stage1_DayTime;
-	////プレイヤー
-	//Player player;
-	//Enemy enemy_01;
-	//Enemy enemy_02;
+	//マップチップ
+	Stage1_ground stage1_Ground;
+	Stage1_DayTime stage1_DayTime;
+	//プレイヤー
+	Player player;
+	Enemy enemy_01;
+	Enemy enemy_02;
 
 	Scene_Manager* scene_Manager;
 };
