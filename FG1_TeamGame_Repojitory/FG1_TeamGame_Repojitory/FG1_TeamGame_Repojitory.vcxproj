@@ -123,7 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Base_Scene.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Scene_Manager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base_Scene.h" />
+    <ClInclude Include="Scene_Manager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
