@@ -17,16 +17,16 @@ void Stage1_ground::Update()
 	{
 		for (int w = 0; w < MAP_WIDTH; w++)
 		{
-			////プレイヤーとブロックの当たり判定
-			//if (collision.Block_Collision_Up(
-			//	w * BLOCK_SIZE,
-			//	h * BLOCK_SIZE,
-			//	player.GetPlayer_Pos_X(),
-			//	player.GetPlayer_Pos_Y()) == true)
-			//{
-			//	player.SetPlayer_Pos_Y(h * BLOCK_SIZE - 64);
-			//	//player.SetPlayer_Pos_Y(100);896
-			//}
+			//プレイヤーとブロックの当たり判定
+			if (collision.Block_Collision_Up(
+				w * BLOCK_SIZE,
+				h * BLOCK_SIZE,
+				player.GetPlayer_Pos_X(),
+				player.GetPlayer_Pos_Y()) == true)
+			{
+				player.SetPlayer_Pos_Y(h * BLOCK_SIZE - 64);
+				//player.SetPlayer_Pos_Y(100);896
+			}
 		}
 	}
 

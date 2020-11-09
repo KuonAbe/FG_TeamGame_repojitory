@@ -1,8 +1,8 @@
 #pragma once
 #include<DxLib.h>
 #include"Base_scene.h"
-//#include"Collision.h"
-//#include"Player.h"
+#include"Collision.h"
+#include"Player.h"
 
 
 class Stage1_ground
@@ -42,8 +42,8 @@ public:
 	void Draw();
 	void Finish();
 
-	//Collision collision;
-	//Player player;
+	Collision collision;
+	Player player;
 
 };
 

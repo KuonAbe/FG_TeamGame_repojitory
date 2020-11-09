@@ -81,6 +81,9 @@
     <ClCompile Include="Player.cpp">
       <Filter>ソース ファイル\Actor.cpp</Filter>
     </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>ソース ファイル\Utility.cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene_Manager.h">
@@ -103,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>ヘッダー ファイル\Actor.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>ヘッダー ファイル\Utility.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
