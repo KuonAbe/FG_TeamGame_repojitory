@@ -37,7 +37,7 @@ int WinMain(
 	SetGraphMode(WinWidth, WinHeight, 32);
 
 	//画面サイズを設定(解像度との比率で設定)
-	SetWindowSizeExtendRate(1.0);
+	SetWindowSizeExtendRate(0.9);
 
 	//画面の背景色を設定
 	SetBackgroundColor(0xEF, 0xFF, 0xEF);
