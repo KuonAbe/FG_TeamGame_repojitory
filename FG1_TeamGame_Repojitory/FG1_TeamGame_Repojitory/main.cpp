@@ -6,7 +6,6 @@ int WinMain(
 	_In_ LPSTR lpCmdLine,
 	_In_ int nCmdShow
 )
-
 {
 	const char TITLE[] = "01_step";
 
@@ -43,7 +42,7 @@ int WinMain(
 	while (1)//簡単なループ処理
 	{
 
-
+		//aatest
 
 		WaitTimer(20);//20ミリ秒
 		if (ProcessMessage() == -1) break;//WindowsAPIのエラー処理
