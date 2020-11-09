@@ -93,6 +93,12 @@
     <ClCompile Include="Stage1_DayTime.cpp">
       <Filter>ソース ファイル\Scene.cpp\Stage1.cpp</Filter>
     </ClCompile>
+    <ClCompile Include="Clear.cpp">
+      <Filter>ソース ファイル\Scene.cpp\Clear.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>ソース ファイル\Scene.cpp\GameOver.cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene_Manager.h">
@@ -127,6 +133,12 @@
     </ClInclude>
     <ClInclude Include="Stage1_DayTime.h">
       <Filter>ヘッダー ファイル\Scene.h\Stage1.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Clear.h">
+      <Filter>ヘッダー ファイル\Scene.h\Clear.h</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>ヘッダー ファイル\Scene.h\GameOver.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
