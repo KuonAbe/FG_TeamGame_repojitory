@@ -69,6 +69,9 @@
     <ClCompile Include="Input.cpp">
       <Filter>ソース ファイル\Utility.cpp</Filter>
     </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>ソース ファイル\Scene.cpp\Title.cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene_Manager.h">
@@ -79,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="Input.h">
       <Filter>ヘッダー ファイル\Utility.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>ヘッダー ファイル\Scene.h\Title.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
