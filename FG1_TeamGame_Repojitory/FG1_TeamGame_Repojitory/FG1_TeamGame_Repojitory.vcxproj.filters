@@ -87,6 +87,12 @@
     <ClCompile Include="Time.cpp">
       <Filter>ソース ファイル\Utility.cpp</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>ソース ファイル\Actor.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1_DayTime.cpp">
+      <Filter>ソース ファイル\Scene.cpp\Stage1.cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene_Manager.h">
@@ -115,6 +121,12 @@
     </ClInclude>
     <ClInclude Include="Time.h">
       <Filter>ヘッダー ファイル\Utility.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>ヘッダー ファイル\Actor.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1_DayTime.h">
+      <Filter>ヘッダー ファイル\Scene.h\Stage1.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
