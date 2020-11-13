@@ -17,7 +17,6 @@ private:
 	//エネミー用変数
 	int enemy_Pos_X;//エネミーのポジション入力用
 	int enemy_Pos_Y;//エネミーのポジション入力用
-	int enemy_array[2];
 
 	//昼用
 

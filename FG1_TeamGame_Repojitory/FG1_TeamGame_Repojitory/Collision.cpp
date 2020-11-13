@@ -10,6 +10,7 @@ bool Collision::Block_Collision_Up(
 	this->ground_Block_Pos_Y = ground_Block_PosY;
 	this->player_Pos_X = player_PosX;
 	this->player_Pos_Y = player_PosY;
+
 	//int vectlX, vectlY;
 	//if (std::abs(player_PosX - ground_Block_PosX) < 64 / 2 + 64 / 2 &&
 	//	std::abs(player_PosY + 64 - ground_Block_PosY) < 64 / 2 + 64 / 2)
