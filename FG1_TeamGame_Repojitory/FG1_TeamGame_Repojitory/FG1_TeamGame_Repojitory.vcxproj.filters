@@ -13,10 +13,132 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\Actor.cpp">
+      <UniqueIdentifier>{a03b1ec8-540d-497b-8307-8b32be6883f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Actor.h">
+      <UniqueIdentifier>{7a17a9c5-57b6-4d4e-9a01-2bd41d6c91b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Utility.cpp">
+      <UniqueIdentifier>{3ca9324a-8cd3-4fc8-9c42-c0bb11e34889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Utility.h">
+      <UniqueIdentifier>{e6653b94-7a00-414c-b911-33441a6d700b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene.cpp">
+      <UniqueIdentifier>{3bf698bc-f054-4c02-a782-27049f90821f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Scene.h">
+      <UniqueIdentifier>{f2ef8cf4-a3b4-48e2-9b58-0c99e72c2afe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene.cpp\Title.cpp">
+      <UniqueIdentifier>{472225e6-c056-4b99-a055-d9d766ab7605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene.cpp\Stage1.cpp">
+      <UniqueIdentifier>{dacedc3f-98e2-439d-b638-fa70a941d77b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene.cpp\Clear.cpp">
+      <UniqueIdentifier>{38b5c271-a012-420c-a798-3337f2f21c00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene.cpp\GameOver.cpp">
+      <UniqueIdentifier>{f8e66f3e-3727-4d25-8875-3454b93bc3ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Scene.h\Title.h">
+      <UniqueIdentifier>{fc43aebb-04c9-4a1f-9ebe-56f9d7c68396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Scene.h\Stage1.h">
+      <UniqueIdentifier>{720b8d3d-abab-470b-b225-ddf6f38a0f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Scene.h\Clear.h">
+      <UniqueIdentifier>{ac89367f-f355-4155-ba55-f8276580423f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Scene.h\GameOver.h">
+      <UniqueIdentifier>{66c42fb1-b640-4f49-8f04-e78ae7412f6f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="Base_Scene.cpp">
+      <Filter>ソース ファイル\Scene.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_Manager.cpp">
+      <Filter>ソース ファイル\Scene.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>ソース ファイル\Utility.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>ソース ファイル\Scene.cpp\Title.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1.cpp">
+      <Filter>ソース ファイル\Scene.cpp\Stage1.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1_ground.cpp">
+      <Filter>ソース ファイル\Scene.cpp\Stage1.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>ソース ファイル\Actor.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>ソース ファイル\Utility.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>ソース ファイル\Utility.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>ソース ファイル\Actor.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1_DayTime.cpp">
+      <Filter>ソース ファイル\Scene.cpp\Stage1.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Clear.cpp">
+      <Filter>ソース ファイル\Scene.cpp\Clear.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>ソース ファイル\Scene.cpp\GameOver.cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Scene_Manager.h">
+      <Filter>ヘッダー ファイル\Scene.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Base_Scene.h">
+      <Filter>ヘッダー ファイル\Scene.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>ヘッダー ファイル\Utility.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>ヘッダー ファイル\Scene.h\Title.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1.h">
+      <Filter>ヘッダー ファイル\Scene.h\Stage1.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1_ground.h">
+      <Filter>ヘッダー ファイル\Scene.h\Stage1.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>ヘッダー ファイル\Actor.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>ヘッダー ファイル\Utility.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>ヘッダー ファイル\Utility.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>ヘッダー ファイル\Actor.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1_DayTime.h">
+      <Filter>ヘッダー ファイル\Scene.h\Stage1.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Clear.h">
+      <Filter>ヘッダー ファイル\Scene.h\Clear.h</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>ヘッダー ファイル\Scene.h\GameOver.h</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
