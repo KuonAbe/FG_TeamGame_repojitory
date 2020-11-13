@@ -12,8 +12,8 @@ void Enemy::Init(int enemy_Pos_X, int enemy_Pos_Y)
 	isEnemy_Dead = false;
 	Direction = false;
 	enemy_Draw_Direction = RIGHT;
-	enemy_Right_Tex = LoadGraph("Village_Human.png");
-	enemy_Left_Tex = LoadGraph("Village_Human.png");
+	enemy_Right_Tex = LoadGraph("Villager.png");
+	enemy_Left_Tex = LoadGraph("Villager.png");
 }
 
 void Enemy::Update(int player_Pos_X, int player_Pos_Y)
@@ -49,7 +49,7 @@ void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 	}
 	DrawFormatString(1000, 500, (255, 255, 255), "player_Pos_X:%d",enemyClass_player_Pos_X);
 
-	if (enemy_pos_Y >= SCREEN_HEIGHT - 248)
+	if (enemy_pos_Y >= SCREEN_HEIGHT - 378)
 	{
 		velocity_Y = 0;
 	}
@@ -72,14 +72,20 @@ void Enemy::Draw()
 		switch (enemy_Draw_Direction)
 		{
 		case Enemy_Draw_Direction::RIGHT:
-			DrawGraph(enemy_pos_X,
-				enemy_pos_Y - 64,
+			DrawExtendGraph(//プレイヤー右向き
+				enemy_pos_X,
+				enemy_pos_Y,
+				enemy_pos_X + 139,
+				enemy_pos_Y + 193,
 				enemy_Right_Tex,
 				TRUE);
 			break;
 		case Enemy_Draw_Direction::LEFT:
-			DrawGraph(enemy_pos_X,
-				enemy_pos_Y - 64,
+			DrawExtendGraph(//プレイヤー右向き
+				enemy_pos_X,
+				enemy_pos_Y,
+				enemy_pos_X + 139,
+				enemy_pos_Y + 193,
 				enemy_Left_Tex,
 				TRUE);
 			break;

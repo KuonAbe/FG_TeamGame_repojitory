@@ -133,8 +133,8 @@ void Player::Draw()
 		DrawExtendGraph(//ƒvƒŒƒCƒ„[¶Œü‚«
 			player_Pos_X,
 			player_Pos_Y,
-			player_Pos_X + 96,
-			player_Pos_Y + 192,
+			player_Pos_X + 97,
+			player_Pos_Y + 193,
 			player_Left_Tex,
 			TRUE);
 		break;
