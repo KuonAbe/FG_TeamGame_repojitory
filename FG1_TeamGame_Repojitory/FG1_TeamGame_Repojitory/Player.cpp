@@ -17,7 +17,7 @@ void Player::Init(int player_Pos_X, int player_Pos_Y)
 	//HPBar用変数
 	HPbar_Cr = GetColor(255, 0, 0);//HPbarの色
 	HPbar_PosX = player_Pos_X - 32;
-	HPbar_PosY = player_Pos_Y - 76;
+	HPbar_PosY = player_Pos_Y - 26;
 	HPbar_Size_X = 112;
 	HPbar_Size_Y = 16;
 	HPgage_Count = 0;
@@ -49,12 +49,12 @@ void Player::Update()
 		velocity_X = 10;
 		player_Draw_Direction = LEFT;
 	}
-	if (player_Pos_Y >= SCREEN_HEIGHT - 248)
+	if (player_Pos_Y >= SCREEN_HEIGHT - 378)
 	{
 		velocity_Y = 0;
 	}
 	HPbar_PosX = player_Pos_X - 32;
-	HPbar_PosY = player_Pos_Y - 76;
+	HPbar_PosY = player_Pos_Y - 26;
 	player_Pos_X = player_Pos_X + velocity_X;
 	player_Pos_Y = player_Pos_Y + velocity_Y;
 
@@ -107,7 +107,7 @@ void Player::Draw()
 		TRUE);
 	DrawGraph(//HPのアイコン
 		player_Pos_X + 80,
-		player_Pos_Y - 76,
+		player_Pos_Y - 26,
 		player_HP_icon_Tex,
 		TRUE);
 	DrawBox(
@@ -121,18 +121,21 @@ void Player::Draw()
 	switch (player_Draw_Direction)
 	{
 	case Player_Draw_Direction::RIGHT:
-		DrawGraph(//プレイヤー右向き
+		DrawExtendGraph(//プレイヤー右向き
 			player_Pos_X,
-			player_Pos_Y - 64,
+			player_Pos_Y,
+			player_Pos_X+97,
+			player_Pos_Y+193,
 			player_Right_Tex,
 			TRUE);
-
 		break;
 	case Player_Draw_Direction::LEFT:
-		DrawGraph(//プレイヤー左向き
+		DrawExtendGraph(//プレイヤー左向き
 			player_Pos_X,
-			player_Pos_Y - 64,
-			player_Right_Tex,
+			player_Pos_Y,
+			player_Pos_X + 96,
+			player_Pos_Y + 192,
+			player_Left_Tex,
 			TRUE);
 		break;
 	case Player_Draw_Direction::ATTACK:

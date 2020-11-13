@@ -4,7 +4,7 @@ Stage1::Stage1()
 {
 	//プレイヤーの生成
 	player_Pos_X = 60;
-	player_Pos_Y = 830;
+	player_Pos_Y = 705;
 	player.Init(player_Pos_X, player_Pos_Y);
 
 	//エネミーの生成

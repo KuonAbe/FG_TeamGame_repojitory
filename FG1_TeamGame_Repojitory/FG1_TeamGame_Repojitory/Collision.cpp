@@ -66,7 +66,7 @@ bool Collision::Enemy_Collision(
 	this->player_Pos_X = player_PosX;
 	this->player_Pos_Y = player_PosY;
 
-	if (player_Pos_X+138 >= enemy_Pos_X && 
+	if (player_Pos_X >= enemy_Pos_X && 
 		player_Pos_X <= enemy_Pos_X + 138 &&
 		player_Pos_Y+192 <= enemy_Pos_Y &&
 		player_Pos_Y >= enemy_Pos_Y+192)
