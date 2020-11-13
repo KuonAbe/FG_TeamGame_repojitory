@@ -16,9 +16,11 @@ void Enemy::Init(int enemy_Pos_X, int enemy_Pos_Y)
 	enemy_Left_Tex = LoadGraph("Village_Human.png");
 }
 
-void Enemy::Update(int player_Pos_X)
+void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 {
 	this->enemyClass_player_Pos_X = player_Pos_X;
+	this->enemyClass_player_Pos_Y = player_Pos_Y;
+
 	if (enemy_pos_X >= enemyClass_player_Pos_X)
 	{
 		enemy_pos_X -= 5;
@@ -34,6 +36,16 @@ void Enemy::Update(int player_Pos_X)
 	{
 		isEnemy_Dead = true;
 	}
+
+	if (collision.Enemy_Collision(
+		enemy_pos_X, enemy_pos_Y,
+		enemyClass_player_Pos_Y, 
+		enemyClass_player_Pos_Y) == true)
+	{
+		DrawFormatString(1000, 400, (255, 255, 255), "player_Pos_Y:%d",enemyClass_player_Pos_Y);
+	}
+	DrawFormatString(1000, 500, (255, 255, 255), "player_Pos_X:%d",enemyClass_player_Pos_X);
+
 }
 
 bool Enemy::Enemy_isDead()
