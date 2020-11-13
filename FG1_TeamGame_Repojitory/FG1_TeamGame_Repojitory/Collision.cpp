@@ -54,3 +54,23 @@ bool Collision::Block_Collision_Up(
 		return true;
 	}
 }
+
+bool Collision::Enemy_Collision(
+	int enemy_PosX,
+	int enemy_PosY,
+	int player_PosX,
+	int player_PosY)
+{
+	this->enemy_Pos_X = enemy_PosX;
+	this->enemy_Pos_Y = enemy_PosY;
+	this->player_Pos_X = player_PosX;
+	this->player_Pos_Y = player_PosY;
+
+	if (player_Pos_X+138 >= enemy_Pos_X && 
+		player_Pos_X <= enemy_Pos_X + 138 &&
+		player_Pos_Y+192 <= enemy_Pos_Y &&
+		player_Pos_Y >= enemy_Pos_Y+192)
+	{
+		return true;
+	}
+}

@@ -1,6 +1,7 @@
 #pragma once
 #include<DxLib.h>
 #define PLAYER_SIZE 64
+#include"Collision.h"
 
 class Enemy
 {
@@ -20,6 +21,7 @@ public:
 
 	//プレイヤー情報受取用
 	int enemyClass_player_Pos_X;//プレイヤーの位置受取用
+	int enemyClass_player_Pos_Y;//プレイヤーの位置受取用
 	int player_Pos_Y;
 	//エネミー用変数
 	int enemy_pos_X;
@@ -31,9 +33,11 @@ public:
 	~Enemy();
 
 	void Init(int enemy_pos_X, int enemy_Pos_Y);
-	void Update(int player_Pos_X);
+	void Update(int player_Pos_X,int player_Pos_Y);
 	bool Enemy_isDead();
 	void Draw();
 	void Finish();
+
+	Collision collision;
 };
 

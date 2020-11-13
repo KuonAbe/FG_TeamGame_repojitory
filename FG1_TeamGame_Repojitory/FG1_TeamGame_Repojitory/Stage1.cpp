@@ -26,18 +26,18 @@ void Stage1::Init()
 void Stage1::Update()
 {
 	player.Update();
-	enemy_01.Update(player.GetPlayer_Pos_X());
-	enemy_02.Update(player.GetPlayer_Pos_X());
+	enemy_01.Update(player.GetPlayer_Pos_X(),player.GetPlayer_Pos_Y());
+	enemy_02.Update(player.GetPlayer_Pos_X(),player.GetPlayer_Pos_Y());
 	stage1_DayTime.Update();
 	stage1_Ground.Update();
 	if (player.Player_isDead() == true)
 	{
-		scene_Manager->Change_Scene(scene_Manager->GAMEOVER);
+		//scene_Manager->Change_Scene(scene_Manager->GAMEOVER);
 	}
 	if (enemy_01.Enemy_isDead() == true &&
 		enemy_02.Enemy_isDead() == true)
 	{
-		scene_Manager->Change_Scene(scene_Manager->CLEAR);
+		//scene_Manager->Change_Scene(scene_Manager->CLEAR);
 	}
 }
 
