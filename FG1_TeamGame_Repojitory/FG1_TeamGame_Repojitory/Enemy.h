@@ -1,6 +1,9 @@
 #pragma once
 #include<DxLib.h>
-#define PLAYER_SIZE 64
+#define Enemy_SIZE 64
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
+
 #include"Collision.h"
 
 class Enemy

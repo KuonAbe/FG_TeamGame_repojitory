@@ -4,15 +4,15 @@ Stage1::Stage1()
 {
 	//プレイヤーの生成
 	player_Pos_X = 60;
-	player_Pos_Y = 830;
+	player_Pos_Y = 705;
 	player.Init(player_Pos_X, player_Pos_Y);
 
 	//エネミーの生成
 	enemy_Pos_X = 1000;
-	enemy_Pos_Y = 830;
+	enemy_Pos_Y = 705;
 	enemy_01.Init(enemy_Pos_X, enemy_Pos_Y);
 	enemy_Pos_X = 1500;
-	enemy_Pos_Y = 830;
+	enemy_Pos_Y = 705;
 	enemy_02.Init(enemy_Pos_X, enemy_Pos_Y);
 	stage1_DayTime.Init();
 	stage1_Ground.Init();
