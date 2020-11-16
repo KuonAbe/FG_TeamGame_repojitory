@@ -40,14 +40,16 @@ void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 	//	isEnemy_Dead = true;
 	//}
 
+	//“–‚½‚è”»’è‹@”\‚µ‚½
 	if (collision.Enemy_Collision(
 		enemy_pos_X, enemy_pos_Y,
-		enemyClass_player_Pos_Y, 
+		enemyClass_player_Pos_X, 
 		enemyClass_player_Pos_Y) == true)
 	{
-		DrawFormatString(1000, 400, (255, 255, 255), "player_Pos_Y:%d",enemyClass_player_Pos_Y);
+
 	}
-	DrawFormatString(1000, 500, (255, 255, 255), "player_Pos_X:%d",enemyClass_player_Pos_X);
+	DrawFormatString(1000, 400, (255, 255, 255), "player_Pos_X:%d",enemyClass_player_Pos_X);
+	DrawFormatString(1000, 500, (255, 255, 255), "player_Pos_X:%d", enemyClass_player_Pos_Y);
 
 	if (enemy_pos_Y >= SCREEN_HEIGHT - 378)
 	{
