@@ -73,14 +73,20 @@ void Player::Update()
 //	this->enemy_bool = enemy_bool;
 //}
 
-void Player::Player_HP()
+void Player::Player_HP(bool enemy_isAttack)
 {
+	this->beAttacked = enemy_isAttack;
 	//プレイヤーのゲージ処理
 	HPgage_Count += 1;
 	if (HPgage_Count > 10)
 	{
 		HPbar_Size_X--;
 		HPgage_Count = 0;
+	}
+	if (beAttacked == true)
+	{
+		HPbar_Size_X -= 10;
+		beAttacked = false;
 	}
 }
 

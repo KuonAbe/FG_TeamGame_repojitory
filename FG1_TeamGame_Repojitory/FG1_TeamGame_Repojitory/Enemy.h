@@ -38,7 +38,7 @@ public:
 	~Enemy();
 
 	void Init(int enemy_pos_X, int enemy_Pos_Y);
-	void Update(int player_Pos_X,int player_Pos_Y);
+	void Update(int player_Pos_X, int player_Pos_Y);
 	bool Enemy_isAttack();
 	bool Enemy_isDead();
 	void Draw();
@@ -47,4 +47,3 @@ public:
 	Collision collision;
 	Stage1_DayTime stage1_DayTime;
 };
-
