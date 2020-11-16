@@ -31,7 +31,7 @@ private:
 
 public:
 	void Init();
-	void Update();
+	int Update();
 	void Draw();
 	void Finish();
 	Time time;

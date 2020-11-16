@@ -33,14 +33,13 @@ void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 		enemy_pos_X += 5;
 		enemy_Draw_Direction = RIGHT;
 	}
-
-
+	
 	//if (enemy_pos_X <= player_Pos_X)
 	//{
 	//	isEnemy_Dead = true;
 	//}
 
-	//当たり判定機能した
+	//エネミーとプレイヤーの当たり判定
 	if (collision.Enemy_Collision(
 		enemy_pos_X, enemy_pos_Y,
 		enemyClass_player_Pos_X, 
@@ -48,6 +47,8 @@ void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 	{
 
 	}
+
+	//プレイヤーの位置確認用
 	DrawFormatString(1000, 400, (255, 255, 255), "player_Pos_X:%d",enemyClass_player_Pos_X);
 	DrawFormatString(1000, 500, (255, 255, 255), "player_Pos_X:%d", enemyClass_player_Pos_Y);
 
