@@ -41,6 +41,7 @@ public:
 	int player_Pos_Y;
 	int velocity_X;//プレイヤー移動量
 	int velocity_Y;//プレイヤー移動量
+	bool beAttacked;//攻撃を受ける
 	Player();
 	~Player();
 
@@ -48,6 +49,7 @@ public:
 	void Update();
 	bool Player_isDead();//プレイヤーの生死状態を返す
 	void Player_recovery(bool enemy_bool);
+	void Player_HP(bool enemy_isAttack);
 	void Draw();
 	void Finish();
 

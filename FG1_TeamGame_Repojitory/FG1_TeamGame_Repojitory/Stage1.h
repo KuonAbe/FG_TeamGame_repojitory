@@ -18,6 +18,7 @@ private:
 	int enemy_Pos_X;//エネミーのポジション入力用
 	int enemy_Pos_Y;//エネミーのポジション入力用
 
+
 	//昼用
 
 	//夜用
@@ -37,9 +38,11 @@ public:
 	Stage1_DayTime stage1_DayTime;
 	//プレイヤー
 	Player player;
+
+	//エネミー
 	Enemy enemy_01;
 	Enemy enemy_02;
-
+	
 	Scene_Manager* scene_Manager;
 };
 

@@ -60,13 +60,6 @@ void Player::Update()
 
 	//プレイヤーの攻撃処理
 
-	//プレイヤーのゲージ処理
-	HPgage_Count += 1;
-	if (HPgage_Count > 2)
-	{
-		HPbar_Size_X--;
-		HPgage_Count = 0;
-	}
 
 	//プレイヤーの死亡処理
 	if (HPbar_Size_X < 0)
@@ -79,6 +72,23 @@ void Player::Update()
 //{
 //	this->enemy_bool = enemy_bool;
 //}
+
+void Player::Player_HP(bool enemy_isAttack)
+{
+	this->beAttacked = enemy_isAttack;
+	//プレイヤーのゲージ処理
+	HPgage_Count += 1;
+	if (HPgage_Count > 10)
+	{
+		HPbar_Size_X--;
+		HPgage_Count = 0;
+	}
+	if (beAttacked == true)
+	{
+		HPbar_Size_X -= 10;
+		beAttacked = false;
+	}
+}
 
 bool Player::Player_isDead()
 {

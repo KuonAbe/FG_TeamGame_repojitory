@@ -2,7 +2,6 @@
 
 Enemy::Enemy()
 {
-
 }
 
 void Enemy::Init(int enemy_Pos_X, int enemy_Pos_Y)
@@ -61,7 +60,7 @@ bool Enemy::Enemy_isAttack()
 			DrawFormatString(1000, 400, (255, 255, 255), "player_Pos_X:%d", enemyClass_player_Pos_X);
 			DrawFormatString(1000, 415, (255, 255, 255), "player_Pos_Y:%d", enemyClass_player_Pos_Y);
 			//エネミーがプレイヤーに当たったら
-			enemy_Draw_Direction = ATTACK;
+			//enemy_Draw_Direction = ATTACK;
 			return true;
 		}
 	}

@@ -26,6 +26,7 @@ void Stage1::Init()
 void Stage1::Update()
 {
 	player.Update();
+	player.Player_HP(enemy_01.Enemy_isAttack());
 	enemy_01.Update(player.GetPlayer_Pos_X(),player.GetPlayer_Pos_Y());
 	enemy_02.Update(player.GetPlayer_Pos_X(),player.GetPlayer_Pos_Y());
 	enemy_01.Enemy_isAttack();
