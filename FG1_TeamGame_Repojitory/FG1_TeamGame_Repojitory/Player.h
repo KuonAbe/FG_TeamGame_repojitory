@@ -48,6 +48,7 @@ public:
 	void Update();
 	bool Player_isDead();//ƒvƒŒƒCƒ„[‚Ì¶€ó‘Ô‚ğ•Ô‚·
 	void Player_recovery(bool enemy_bool);
+	void Player_HP();
 	void Draw();
 	void Finish();
 
