@@ -39,19 +39,7 @@ void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 	//	isEnemy_Dead = true;
 	//}
 
-	//エネミーとプレイヤーの当たり判定
-	if (collision.Enemy_Collision(
-		enemy_pos_X, enemy_pos_Y,
-		enemyClass_player_Pos_X, 
-		enemyClass_player_Pos_Y) == true)
-	{
-		//エネミーがプレイヤーに当たったら
-		
-	}
 
-	//プレイヤーの位置確認用
-	DrawFormatString(1000, 400, (255, 255, 255), "player_Pos_X:%d",enemyClass_player_Pos_X);
-	DrawFormatString(1000, 500, (255, 255, 255), "player_Pos_X:%d", enemyClass_player_Pos_Y);
 
 	if (enemy_pos_Y >= SCREEN_HEIGHT - 378)
 	{
@@ -59,6 +47,24 @@ void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 	}
 
 	enemy_pos_Y += velocity_Y;
+}
+
+bool Enemy::Enemy_isAttack()
+{
+	//プレイヤーの位置確認用
+	DrawFormatString(1000, 400, (255, 255, 255), "player_Pos_X:%d",enemyClass_player_Pos_X);
+	DrawFormatString(1000, 405, (255, 255, 255), "player_Pos_Y:%d", enemyClass_player_Pos_Y);
+	//エネミーとプレイヤーの当たり判定
+	if (collision.Enemy_Collision(
+		enemy_pos_X, enemy_pos_Y,
+		enemyClass_player_Pos_X,
+		enemyClass_player_Pos_Y) == true)
+	{
+		//エネミーがプレイヤーに当たったら
+		enemy_Draw_Direction = ATTACK;
+		return true;
+	}
+
 }
 
 bool Enemy::Enemy_isDead()

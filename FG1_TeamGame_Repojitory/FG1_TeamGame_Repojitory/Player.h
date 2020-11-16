@@ -55,7 +55,7 @@ public:
 	void SetPlayer_Pos_Y(int player_Pos_Y);
 	int GetPlayer_Pos_X() { return player_Pos_X; }
 	int GetPlayer_Pos_Y() { return player_Pos_Y; }
-
+	int GetPlayer_HP() { return HPbar_Size_X; }
 
 };
 
