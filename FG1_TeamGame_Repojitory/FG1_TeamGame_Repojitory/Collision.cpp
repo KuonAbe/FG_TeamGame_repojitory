@@ -68,8 +68,8 @@ bool Collision::Enemy_Collision(
 
 	if (player_Pos_X >= enemy_Pos_X && 
 		player_Pos_X <= enemy_Pos_X + 138 &&
-		player_Pos_Y+192 <= enemy_Pos_Y &&
-		player_Pos_Y >= enemy_Pos_Y+192)
+		player_Pos_Y <= enemy_Pos_Y &&
+		player_Pos_Y >= enemy_Pos_Y-200)
 	{
 		return true;
 	}

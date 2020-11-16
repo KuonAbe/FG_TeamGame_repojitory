@@ -129,6 +129,7 @@ void Player::Draw()
 			player_Right_Tex,
 			TRUE);
 		break;
+
 	case Player_Draw_Direction::LEFT:
 		DrawExtendGraph(//ƒvƒŒƒCƒ„[¶Œü‚«
 			player_Pos_X,

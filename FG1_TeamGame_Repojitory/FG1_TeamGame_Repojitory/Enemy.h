@@ -5,6 +5,7 @@
 #define SCREEN_HEIGHT 1080
 
 #include"Collision.h"
+#include"Stage1_DayTime.h"
 
 class Enemy
 {
@@ -17,6 +18,7 @@ private:
 	enum Enemy_Draw_Direction {
 		RIGHT,
 		LEFT,
+		ATTACK,
 	};
 	Enemy_Draw_Direction enemy_Draw_Direction;
 
@@ -37,10 +39,12 @@ public:
 
 	void Init(int enemy_pos_X, int enemy_Pos_Y);
 	void Update(int player_Pos_X,int player_Pos_Y);
+	bool Enemy_isAttack();
 	bool Enemy_isDead();
 	void Draw();
 	void Finish();
 
 	Collision collision;
+	Stage1_DayTime stage1_DayTime;
 };
 

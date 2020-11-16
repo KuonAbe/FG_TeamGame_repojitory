@@ -13,7 +13,7 @@ void Stage1_DayTime::Init()
 	starPos = AM6;
 }
 
-void Stage1_DayTime::Update()
+int Stage1_DayTime::Update()
 {
 	if (time.nowTime() <= 200)
 		starPos = AM6;
@@ -35,6 +35,8 @@ void Stage1_DayTime::Update()
 		starPos = AM3;
 	else if (time.nowTime() <= 2800)
 		starPos = AM5;
+
+	return starPos;
 }
 
 void Stage1_DayTime::Draw()

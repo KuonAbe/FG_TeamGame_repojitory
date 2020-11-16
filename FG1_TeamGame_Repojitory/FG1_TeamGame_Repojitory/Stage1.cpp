@@ -28,6 +28,8 @@ void Stage1::Update()
 	player.Update();
 	enemy_01.Update(player.GetPlayer_Pos_X(),player.GetPlayer_Pos_Y());
 	enemy_02.Update(player.GetPlayer_Pos_X(),player.GetPlayer_Pos_Y());
+	enemy_01.Enemy_isAttack();
+	enemy_02.Enemy_isAttack();
 	stage1_DayTime.Update();
 	stage1_Ground.Update();
 	if (player.Player_isDead() == true)
