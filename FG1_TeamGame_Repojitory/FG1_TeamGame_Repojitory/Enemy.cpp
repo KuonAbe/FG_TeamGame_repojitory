@@ -45,7 +45,8 @@ void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 		enemyClass_player_Pos_X, 
 		enemyClass_player_Pos_Y) == true)
 	{
-
+		//エネミーがプレイヤーに当たったら
+		
 	}
 
 	//プレイヤーの位置確認用
@@ -75,7 +76,7 @@ void Enemy::Draw()
 		switch (enemy_Draw_Direction)
 		{
 		case Enemy_Draw_Direction::RIGHT:
-			DrawExtendGraph(//プレイヤー右向き
+			DrawExtendGraph(//エネミー右向き
 				enemy_pos_X,
 				enemy_pos_Y,
 				enemy_pos_X + 139,
@@ -84,13 +85,16 @@ void Enemy::Draw()
 				TRUE);
 			break;
 		case Enemy_Draw_Direction::LEFT:
-			DrawExtendGraph(//プレイヤー右向き
+			DrawExtendGraph(//エネミー右向き
 				enemy_pos_X,
 				enemy_pos_Y,
 				enemy_pos_X + 139,
 				enemy_pos_Y + 193,
 				enemy_Left_Tex,
 				TRUE);
+			break;
+		case Enemy_Draw_Direction::ATTACK:
+			//エネミーの攻撃アニメーション
 			break;
 		}
 	}
