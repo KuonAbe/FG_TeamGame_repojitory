@@ -48,6 +48,7 @@ void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 
 bool Enemy::Enemy_isAttack()
 {
+
 	if (isEnemy_Dead == false)
 	{
 		//プレイヤーの位置確認用
