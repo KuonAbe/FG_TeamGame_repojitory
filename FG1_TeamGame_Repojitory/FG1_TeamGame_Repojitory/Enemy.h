@@ -34,6 +34,8 @@ public:
 	int velocity_X;//エネミー移動量
 	int velocity_Y;//エネミー移動量
 
+	int enemy_Attack_Count;//エネミー多段ヒット防止用
+
 	Enemy();
 	~Enemy();
 

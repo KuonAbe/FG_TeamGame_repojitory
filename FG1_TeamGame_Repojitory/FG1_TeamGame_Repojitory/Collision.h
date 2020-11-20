@@ -10,6 +10,7 @@ private:
 	int enemy_Pos_X;
 	int enemy_Pos_Y;
 
+
 public:
 	bool Block_Collision_Up(
 		int ground_Block_PosX,
@@ -22,5 +23,6 @@ public:
 		int enemy_PosY,
 		int player_PosX,
 		int player_PosY);
+
 };
 

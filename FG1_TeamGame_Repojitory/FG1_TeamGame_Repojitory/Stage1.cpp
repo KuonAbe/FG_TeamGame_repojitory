@@ -3,7 +3,7 @@
 Stage1::Stage1()
 {
 	//ƒvƒŒƒCƒ„[‚Ì¶¬
-	player_Pos_X = 60;
+	player_Pos_X = 100;
 	player_Pos_Y = 705;
 	player.Init(player_Pos_X, player_Pos_Y);
 
