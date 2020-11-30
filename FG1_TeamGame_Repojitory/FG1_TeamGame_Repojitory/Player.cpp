@@ -13,7 +13,8 @@ void Player::Init(int player_Pos_X, int player_Pos_Y)
 	velocity_X = 0;//移動量無し
 	velocity_Y = 0;//移動量重力分
 	isPlayer_Dead = false;//死んでいない
-	player_Draw_Direction = RIGHT;//初期は右向き
+	Player_L = true;//初期は右向き
+	player_Draw_Direction = WAIT_L;//初期は待機
 	//HPBar用変数
 	HPbar_Cr = GetColor(255, 0, 0);//HPbarの色
 	HPbar_PosX = player_Pos_X - 32;
@@ -22,8 +23,14 @@ void Player::Init(int player_Pos_X, int player_Pos_Y)
 	HPbar_Size_Y = 16;
 	HPgage_Count = 0;
 	//プレイヤーテクスチャロード
-	player_Left_Tex = LoadGraph("Dracula.png");//プレイヤー左向き
-	player_Right_Tex = LoadGraph("Dracula.png");//プレイヤー右向き
+	player_Left_Tex = LoadGraph("Dracula_L.png");//待機左向き
+	player_Right_Tex = LoadGraph("Dracula_R.png");//待機右向き
+	player_Jump_L_Tex = LoadGraph("Dracula_Jump_L.png");//ジャンプ左向き
+	player_Jump_R_Tex = LoadGraph("Dracula_Jump_R.png");//ジャンプ右向き	
+	player_Attack_L_Tex = LoadGraph("Dracula_Attack_L.png");//攻撃左向き
+	player_Attack_R_Tex = LoadGraph("Dracula_Attack_R.png");//攻撃右向き
+	player_Run_L_Tex = LoadGraph("Dracula_Run_L.png");//左向き
+	player_Run_R_Tex = LoadGraph("Dracula_Run_R.png");//右向き
 	player_HPbar_Tex = LoadGraph("HPbar_frame.png");
 	player_HP_icon_Tex = LoadGraph("Blood_icon.png");
 
@@ -36,19 +43,36 @@ void Player::Update()
 	velocity_X = 0;
 	velocity_Y = 3;
 
+
+	player_Draw_Direction = WAIT_L;
+
 	//プレイヤーの行動処理
 	if (CheckHitKey(KEY_INPUT_A) == 1)
 	{
 		//キーのAを押したら
 		velocity_X = -10;
-		player_Draw_Direction = RIGHT;
+		Player_L = true;
+		player_Draw_Direction = RUN_L;
 	}
 	if (CheckHitKey(KEY_INPUT_D) == 1)
 	{
 		//キーのDを押したら
 		velocity_X = 10;
-		player_Draw_Direction = LEFT;
+		player_Draw_Direction = RUN_R;
 	}
+	if (CheckHitKey(KEY_INPUT_SPACE) == 1)
+	{
+		if (Player_L)
+		{
+			player_Draw_Direction = JUMP_L;
+		}
+		else
+		{
+			player_Draw_Direction = JUMP_R;
+		}
+
+	}
+
 	if (player_Pos_Y >= SCREEN_HEIGHT - 378)
 	{
 		velocity_Y = 0;
@@ -130,17 +154,17 @@ void Player::Draw()
 	//プレイヤーのアニメーション
 	switch (player_Draw_Direction)
 	{
-	case Player_Draw_Direction::RIGHT:
+	case Player_Draw_Direction::WAIT_R:
 		DrawExtendGraph(//プレイヤー右向き
 			player_Pos_X,
 			player_Pos_Y,
-			player_Pos_X+97,
-			player_Pos_Y+193,
+			player_Pos_X + 97,
+			player_Pos_Y + 193,
 			player_Right_Tex,
 			TRUE);
 		break;
 
-	case Player_Draw_Direction::LEFT:
+	case Player_Draw_Direction::WAIT_L:
 		DrawExtendGraph(//プレイヤー左向き
 			player_Pos_X,
 			player_Pos_Y,
@@ -149,8 +173,15 @@ void Player::Draw()
 			player_Left_Tex,
 			TRUE);
 		break;
-	case Player_Draw_Direction::ATTACK:
+	case Player_Draw_Direction::ATTACK_L:
 		//ATTACKアニメーション
+		DrawExtendGraph(//プレイヤー左向き
+			player_Pos_X,
+			player_Pos_Y,
+			player_Pos_X + 97,
+			player_Pos_Y + 193,
+			player_Left_Tex,
+			TRUE);
 		break;
 	case Player_Draw_Direction::TIMESKIP:
 		//TimeSkipアニメーション

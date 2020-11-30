@@ -10,8 +10,14 @@ private:
 	bool isPlayer_Dead;//死んでいるかどうか
 
 	//プレイヤーテクスチャ用変数
-	int player_Left_Tex;//プレイヤー左向き
-	int player_Right_Tex;//プレイヤー右向き
+	int player_Left_Tex;//待機左向き
+	int player_Right_Tex;//待機右向き	
+	int player_Run_L_Tex;//移動左向き
+	int player_Run_R_Tex;//移動右向き
+	int player_Jump_L_Tex;//ジャンプ左向き
+	int player_Jump_R_Tex;//ジャンプ右向き
+	int player_Attack_L_Tex;//攻撃左向き
+	int player_Attack_R_Tex;//攻撃右向き
 	//プレイヤーのHPBar用変数
 	int player_HPbar_Tex;//プレイヤーのHPテクスチャ
 	int player_HP_icon_Tex;//HPアイコンのテクスチャ
@@ -27,9 +33,14 @@ private:
 
 	//プレイヤーアニメーション用
 	enum Player_Draw_Direction {
-		RIGHT,
-		LEFT,
-		ATTACK,
+		WAIT_L,
+		WAIT_R,
+		RUN_L,
+		RUN_R,
+		JUMP_L,
+		JUMP_R,
+		ATTACK_L,
+		ATTACK_R,
 		TIMESKIP,
 		DEAD,
 	};
@@ -42,6 +53,7 @@ public:
 	int velocity_X;//プレイヤー移動量
 	int velocity_Y;//プレイヤー移動量
 	bool beAttacked;//攻撃を受ける
+	bool Player_L;
 	Player();
 	~Player();
 
