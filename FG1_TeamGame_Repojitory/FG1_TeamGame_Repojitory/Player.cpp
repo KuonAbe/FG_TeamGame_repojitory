@@ -6,7 +6,7 @@ Player::Player()
 
 void Player::Init(int player_Pos_X, int player_Pos_Y)
 {
-
+	//
 	//プレイヤー用初期化
 	this->player_Pos_X = player_Pos_X;
 	this->player_Pos_Y = player_Pos_Y;

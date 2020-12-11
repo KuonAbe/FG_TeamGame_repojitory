@@ -52,6 +52,7 @@ void Stage1::Update()
 			//scene_Manager->Change_Scene(scene_Manager->CLEAR);
 		}
 	}
+	//
 }
 
 void Stage1::Draw()

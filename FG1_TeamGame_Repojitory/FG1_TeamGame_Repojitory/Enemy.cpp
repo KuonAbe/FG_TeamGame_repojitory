@@ -53,6 +53,7 @@ void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 	}
 
 	enemy_pos_Y += velocity_Y;
+	//
 }
 
 bool Enemy::Enemy_isAttack()
