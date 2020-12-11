@@ -40,7 +40,7 @@ bool Collision::Enemy_Collision(
 	}
 }
 
-bool Collision::Player_Collision(
+bool Collision::Player_Attack_Direction_Right(
 	int player_PosX,
 	int player_PosY,
 	int enemy_PosX,
@@ -51,7 +51,31 @@ bool Collision::Player_Collision(
 	this->enemy_Pos_X = enemy_PosX;
 	this->enemy_Pos_Y = enemy_PosY;
 
-	if(player_Pos_X )
+	if (player_Pos_X + 139 >= enemy_Pos_X &&
+		player_Pos_X + 278 <= enemy_Pos_X &&
+		player_Pos_Y <= enemy_Pos_Y &&
+		player_Pos_Y >= enemy_Pos_Y-200)
+	{
+		return true;
+	}
+}
 
-	return true;
+bool Collision::Player_Attack_Direction_Left(
+	int player_PosX,
+	int player_PosY,
+	int enemy_PosX,
+	int enemy_PosY)
+{
+	this->player_Pos_X = player_PosX;
+	this->player_Pos_Y = player_PosY;
+	this->enemy_Pos_X = enemy_PosX;
+	this->enemy_Pos_Y = enemy_PosY;
+
+	if (player_Pos_X >= enemy_Pos_X &&
+		player_Pos_X -139 <= enemy_Pos_X &&
+		player_Pos_Y <= enemy_Pos_Y &&
+		player_Pos_Y >= enemy_Pos_Y-200)
+	{
+		return true;
+	}
 }

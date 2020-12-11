@@ -3,7 +3,6 @@
 Stage1::Stage1()
 {
 
-
 	//ƒvƒŒƒCƒ„[‚Ì¶¬
 	player_Pos_X = 100;
 	player_Pos_Y = 705;

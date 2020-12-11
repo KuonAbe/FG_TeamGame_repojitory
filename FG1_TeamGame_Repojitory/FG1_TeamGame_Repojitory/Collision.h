@@ -25,8 +25,15 @@ public:
 		int player_PosX,
 		int player_PosY);
 
-	//プレイヤーの攻撃用当たり判定
-	bool Player_Collision(
+	//プレイヤーの攻撃用当たり判定右向き
+	bool Player_Attack_Direction_Right(
+		int player_PosX,
+		int player_PosY,
+		int enemy_PosX,
+		int enemy_PosY);
+
+	//プレイヤーの攻撃用当たり判定左向き
+	bool Player_Attack_Direction_Left(
 		int player_PosX,
 		int player_PosY,
 		int enemy_PosX,
