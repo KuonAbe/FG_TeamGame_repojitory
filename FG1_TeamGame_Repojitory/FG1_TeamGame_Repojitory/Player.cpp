@@ -37,8 +37,13 @@ void Player::Init(int player_Pos_X, int player_Pos_Y)
 	enemy_bool = false;
 }
 
-void Player::Update()
+void Player::Update(int enemy_Pos_X, int enemy_Pos_Y)
 {
+	this->playerClass_enemy_Pos_X = enemy_Pos_X;
+	this->playerClass_enemy_Pos_Y = enemy_Pos_Y;
+	DrawFormatString(1000, 300, (255, 255, 255), "enemy_Pos_X:%d", playerClass_enemy_Pos_X);
+	DrawFormatString(1000, 315, (255, 255, 255), "enemy_Pos_Y:%d", playerClass_enemy_Pos_Y);
+
 	//ƒvƒŒƒCƒ„[‚ÌˆÚ“®—Ê
 	velocity_X = 0;
 	velocity_Y = 3;

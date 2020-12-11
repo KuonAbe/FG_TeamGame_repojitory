@@ -57,8 +57,11 @@ public:
 	Player();
 	~Player();
 
+	int playerClass_enemy_Pos_X;
+	int playerClass_enemy_Pos_Y;
+
 	void Init(int player_Pos_X, int player_Pos_Y);
-	void Update();
+	void Update(int enemy_Pos_X,int enemy_Pos_Y);
 	bool Player_isDead();//ƒvƒŒƒCƒ„[‚Ì¶€ó‘Ô‚ğ•Ô‚·
 	void Player_recovery(bool enemy_bool);
 	void Player_HP(bool enemy_isAttack);
