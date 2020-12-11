@@ -16,9 +16,9 @@ private:
 	int enemy_Right_Tex;//エネミー右むき
 
 	enum Enemy_Draw_Direction {
-		RIGHT,
-		LEFT,
-		ATTACK,
+		RIGHT,//右向き
+		LEFT,//左向き
+		ATTACK,//攻撃
 	};
 	Enemy_Draw_Direction enemy_Draw_Direction;
 
@@ -28,6 +28,7 @@ public:
 	int enemyClass_player_Pos_X;//プレイヤーの位置受取用
 	int enemyClass_player_Pos_Y;//プレイヤーの位置受取用
 	int player_Pos_Y;
+
 	//エネミー用変数
 	int enemy_pos_X;
 	int enemy_pos_Y;
@@ -37,9 +38,10 @@ public:
 	int enemy_Attack_Count;//エネミー多段ヒット防止用
 
 	Enemy();
+	Enemy(int enemy_Pos_X, int enemy_Pos_Y);
 	~Enemy();
 
-	void Init(int enemy_pos_X, int enemy_Pos_Y);
+	void Init(/*int enemy_pos_X, int enemy_Pos_Y*/);
 	void Update(int player_Pos_X, int player_Pos_Y);
 	bool Enemy_isAttack();
 	bool Enemy_isDead();

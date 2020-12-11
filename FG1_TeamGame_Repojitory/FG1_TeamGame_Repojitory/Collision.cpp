@@ -31,12 +31,27 @@ bool Collision::Enemy_Collision(
 	this->player_Pos_X = player_PosX;
 	this->player_Pos_Y = player_PosY;
 
-	if (player_Pos_X+10 >= enemy_Pos_X && 
+	if (player_Pos_X + 10 >= enemy_Pos_X &&
 		player_Pos_X <= enemy_Pos_X + 138 &&
 		player_Pos_Y <= enemy_Pos_Y &&
-		player_Pos_Y >= enemy_Pos_Y-200)
+		player_Pos_Y >= enemy_Pos_Y - 200)
 	{
 		return true;
 	}
 }
 
+bool Collision::Player_Collision(
+	int player_PosX,
+	int player_PosY,
+	int enemy_PosX,
+	int enemy_PosY)
+{
+	this->player_Pos_X = player_PosX;
+	this->player_Pos_Y = player_PosY;
+	this->enemy_Pos_X = enemy_PosX;
+	this->enemy_Pos_Y = enemy_PosY;
+
+	if(player_Pos_X )
+
+	return true;
+}

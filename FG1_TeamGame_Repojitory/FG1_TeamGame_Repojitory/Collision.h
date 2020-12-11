@@ -18,11 +18,19 @@ public:
 		int player_PosX,
 		int player_PosY);
 
+	//エネミーの攻撃用当たり判定
 	bool Enemy_Collision(
 		int enemy_PosX,
 		int enemy_PosY,
 		int player_PosX,
 		int player_PosY);
+
+	//プレイヤーの攻撃用当たり判定
+	bool Player_Collision(
+		int player_PosX,
+		int player_PosY,
+		int enemy_PosX,
+		int enemy_PosY);
 
 };
 

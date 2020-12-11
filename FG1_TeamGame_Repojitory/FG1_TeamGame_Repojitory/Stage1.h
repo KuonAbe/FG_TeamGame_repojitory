@@ -40,11 +40,7 @@ public:
 	Player player;
 
 	//エネミー
-	Enemy enemy_01;
-	Enemy enemy_02;
-	
 	Enemy enemys[2];
-	//enemys = new Enemy[2];
 
 	Scene_Manager* scene_Manager;
 };

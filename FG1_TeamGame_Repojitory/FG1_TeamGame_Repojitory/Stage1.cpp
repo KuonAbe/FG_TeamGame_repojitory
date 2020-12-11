@@ -2,18 +2,19 @@
 
 Stage1::Stage1()
 {
+
+
 	//プレイヤーの生成
 	player_Pos_X = 100;
 	player_Pos_Y = 705;
 	player.Init(player_Pos_X, player_Pos_Y);
+	enemys[0] = Enemy(1000, 705);
+	enemys[1] = Enemy(1500, 705);
+	for (int i = 0; i < 2; i++)
+	{
+		enemys[i].Init();
+	}
 
-	//エネミーの生成
-	enemy_Pos_X = 1000;
-	enemy_Pos_Y = 705;
-	enemy_01.Init(enemy_Pos_X, enemy_Pos_Y);
-	enemy_Pos_X = 1500;
-	enemy_Pos_Y = 705;
-	enemy_02.Init(enemy_Pos_X, enemy_Pos_Y);
 	stage1_DayTime.Init();
 	stage1_Ground.Init();
 }
@@ -26,21 +27,30 @@ void Stage1::Init()
 void Stage1::Update()
 {
 	player.Update();
-	player.Player_HP(enemy_01.Enemy_isAttack());
-	enemy_01.Update(player.GetPlayer_Pos_X(),player.GetPlayer_Pos_Y());
-	enemy_02.Update(player.GetPlayer_Pos_X(),player.GetPlayer_Pos_Y());
-	enemy_01.Enemy_isAttack();
-	enemy_02.Enemy_isAttack();
+	for (int i = 0; i < 2; i++)
+	{
+		player.Player_HP(enemys[i].Enemy_isAttack());
+		enemys[i].Update(player.GetPlayer_Pos_X(), player.GetPlayer_Pos_Y());
+	}
 	stage1_DayTime.Update();
 	stage1_Ground.Update();
+
+	//プレイヤーが死んだら
 	if (player.Player_isDead() == true)
 	{
-		//scene_Manager->Change_Scene(scene_Manager->GAMEOVER);
+		//ゲームオーバーシーンに切り替わる
+		scene_Manager->Change_Scene(scene_Manager->GAMEOVER);
 	}
-	if (enemy_01.Enemy_isDead() == true &&
-		enemy_02.Enemy_isDead() == true)
+	
+	for (int i = 0; i < 2; i++)
 	{
-		//scene_Manager->Change_Scene(scene_Manager->CLEAR);
+		//敵が全部死んだら		
+		if (enemys[0].Enemy_isDead() == true&&
+			enemys[1].Enemy_isDead()==true)
+		{
+			//クリアシーンに切り替わる
+			scene_Manager->Change_Scene(scene_Manager->CLEAR);
+		}
 	}
 }
 
@@ -49,15 +59,16 @@ void Stage1::Draw()
 	stage1_DayTime.Draw();
 	stage1_Ground.Draw();
 	player.Draw();
-	enemy_01.Draw();
-	enemy_02.Draw();
+
+	for (int i = 0; i < 2; i++)
+	{
+		enemys[i].Draw();
+	}
 }
 
 void Stage1::Finish()
 {
 	player.Finish();
-	enemy_01.Finish();
-	enemy_02.Finish();
 	stage1_DayTime.Finish();
 	stage1_Ground.Finish();
 }

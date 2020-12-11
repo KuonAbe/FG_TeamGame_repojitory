@@ -2,12 +2,20 @@
 
 Enemy::Enemy()
 {
+
 }
 
-void Enemy::Init(int enemy_Pos_X, int enemy_Pos_Y)
+Enemy::Enemy(int enemy_Pos_X, int enemy_Pos_Y)
+	/*:enemy_pos_X(enemy_Pos_X),
+	enemy_pos_Y(enemy_Pos_Y)*/
 {
-	this->enemy_pos_X = enemy_Pos_X;
-	this->enemy_pos_Y = enemy_Pos_Y;
+
+	enemy_pos_X = enemy_Pos_X;
+	enemy_pos_Y = enemy_Pos_Y;
+}
+
+void Enemy::Init()
+{
 	isEnemy_Dead = false;
 	Direction = false;
 	enemy_Attack_Count = 0;
@@ -34,10 +42,10 @@ void Enemy::Update(int player_Pos_X, int player_Pos_Y)
 		enemy_Draw_Direction = RIGHT;
 	}
 
-	//if (enemy_pos_X <= player_Pos_X)
-	//{
-	//	isEnemy_Dead = true;
-	//}
+	if (enemy_pos_X <= player_Pos_X)
+	{
+		isEnemy_Dead = true;
+	}
 
 	if (enemy_pos_Y >= SCREEN_HEIGHT - 378)
 	{
@@ -60,9 +68,11 @@ bool Enemy::Enemy_isAttack()
 			enemyClass_player_Pos_Y) == true &&
 			enemy_Attack_Count >= 100)
 		{
+			//当たり判定確認用
 			DrawFormatString(1000, 400, (255, 255, 255), "player_Pos_X:%d", enemyClass_player_Pos_X);
 			DrawFormatString(1000, 415, (255, 255, 255), "player_Pos_Y:%d", enemyClass_player_Pos_Y);
 
+			//多段ヒット防止用エネミーカウント初期化
 			if(enemy_Attack_Count>=101)
 			enemy_Attack_Count = 0;
 

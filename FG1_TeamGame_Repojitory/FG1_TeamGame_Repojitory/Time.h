@@ -11,7 +11,8 @@ private:
 public:
 	void Init();
 	int nowTime();
-
+	void wait_func();
+	void DeltaTime();
 
 };
 
