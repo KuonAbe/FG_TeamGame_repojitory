@@ -39,7 +39,7 @@ void Stage1::Update()
 	if (player.Player_isDead() == true)
 	{
 		//ゲームオーバーシーンに切り替わる
-		scene_Manager->Change_Scene(scene_Manager->GAMEOVER);
+		//scene_Manager->Change_Scene(scene_Manager->GAMEOVER);
 	}
 	
 	for (int i = 0; i < 2; i++)
@@ -49,7 +49,7 @@ void Stage1::Update()
 			enemys[1].Enemy_isDead()==true)
 		{
 			//クリアシーンに切り替わる
-			scene_Manager->Change_Scene(scene_Manager->CLEAR);
+			//scene_Manager->Change_Scene(scene_Manager->CLEAR);
 		}
 	}
 }
